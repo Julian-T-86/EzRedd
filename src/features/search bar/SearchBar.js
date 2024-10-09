@@ -3,7 +3,7 @@ import { useState } from "react";
 import './SearchBar.css'
 
 export default function SearchBar() {
-    
+
 
     return (
             <div className="head-wrapper">                
@@ -15,7 +15,7 @@ export default function SearchBar() {
                 <label>
                     <input 
                         name='search' 
-                        defaultValue='Search...'
+                        placeholder='Search...'
                     />
                 </label> 
             </div>

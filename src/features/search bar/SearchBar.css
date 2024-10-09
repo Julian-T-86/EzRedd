@@ -18,4 +18,5 @@
 .head-wrapper label input {
     background-color: #FFF8F0;
     color: #92140C;
+    outline-color: #92140C;
 }
