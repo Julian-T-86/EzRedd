@@ -1,0 +1,22 @@
+.head-wrapper {
+    grid-area: searchBar;
+    display: flex; 
+    color: #92140C; 
+    background-color: #1E1E24; 
+    justify-content: space-evenly;
+}
+
+.head-wrapper div {
+    display: flex;
+    border: red solid;
+}
+
+.head-wrapper label {
+    position: relative; 
+    top: 32px;
+}
+
+.head-wrapper label input {
+    background-color: #FFF8F0;
+    color: #92140C;
+}

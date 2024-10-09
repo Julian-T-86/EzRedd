@@ -1,0 +1,22 @@
+div {
+    grid-area: sideBar;
+    color: #92140c;
+    background-color: #1E1E24;
+    position: relative;
+}
+
+div h2 {
+    overflow: hidden;
+}
+
+div button {
+    position: absolute;
+    inset: 45vh -1.25rem auto auto;
+    width: 2.5rem;
+    aspect-ratio: 1;
+    background-color: #fff8f0;
+    border: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+}

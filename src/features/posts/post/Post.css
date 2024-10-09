@@ -1,0 +1,25 @@
+.icon-container {
+    display: flex;
+}
+
+.post-icon {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+
+.post-icon:nth-child(3) {
+    margin-right: 0.6rem;
+}
+
+.post-icon:nth-child(5) {
+    margin-left: 0.6rem;
+}
+
+img {
+    border-radius: 20px;
+}
+
+hr {
+    border-top: #fff8f0 solid 1.5px;
+    border-radius: 1px;
+}
