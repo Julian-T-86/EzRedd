@@ -1,7 +1,10 @@
 import { SlSocialReddit } from "react-icons/sl";
+import { useState } from "react";
 import './SearchBar.css'
 
 export default function SearchBar() {
+    
+
     return (
             <div className="head-wrapper">                
                 <div>

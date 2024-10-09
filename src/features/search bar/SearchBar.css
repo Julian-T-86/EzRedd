@@ -8,7 +8,6 @@
 
 .head-wrapper div {
     display: flex;
-    border: red solid;
 }
 
 .head-wrapper label {

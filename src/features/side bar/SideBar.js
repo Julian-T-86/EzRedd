@@ -2,25 +2,13 @@ import { TbSquareToggle } from "react-icons/tb";
 import './SideBar.css'
 
 
-export default function SideBar() {
-    const handleClick = (e) => {
-        e.preventDefault();
-        const expandSideBar = document.body.querySelector('.sb-collapse');
-        const collapseSideBar = document.body.querySelector('.grid-container');
-
-        if (expandSideBar) {
-            expandSideBar.classList.remove('sb-collapse');
-            expandSideBar.classList.add('grid-container');
-        } else if (collapseSideBar) {
-            collapseSideBar.classList.remove('grid-container');
-            collapseSideBar.classList.add('sb-collapse');
-        }
-    } 
+export default function SideBar({ toggleSideBar }) {
+    
 
     return (
         <div>
             <h2>Sub Reddits:</h2>
-            <button onClick={handleClick}>
+            <button onClick={toggleSideBar}>
                 <TbSquareToggle 
                     size='20px'
                     style={{
