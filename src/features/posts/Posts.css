@@ -1,0 +1,7 @@
+.posts-container {
+    grid-area: posts;
+}
+
+.posts-container h2 {
+    margin-left: 1.3rem;
+}

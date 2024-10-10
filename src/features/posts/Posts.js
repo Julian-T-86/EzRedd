@@ -23,17 +23,22 @@ export default function Posts({ subreddit }) {
     if (status === 'failed') {
         return <div>Error: {error} </div>
     }
+
+    posts.map(post => console.log(post.url))
     return (
         <div className="posts-container"> 
             <h2>Top Posts from r/{subreddit}</h2>
             <ul>
                 {posts.map(post => (
                 <li key={post.id}>
-                    <a href={`https://www.reddit.com${post.permalink}`} target="_blank" rel="noopener noreferrer">
-                    {post.title}
-                        <p>{post.selftext}</p>
-                    </a>
-                    
+                    <Post 
+                        title={post.title} 
+                        text={post.selftext} 
+                        link={post.permalink} 
+                        score={post.score} 
+                        author={post.author}
+                        imageLink={post?.url}
+                    />
                 </li>
                 ))}
             </ul>

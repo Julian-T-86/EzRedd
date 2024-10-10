@@ -1,9 +1,10 @@
 .head-wrapper {
     grid-area: searchBar;
-    display: flex; 
+    display: inline-flex; 
     color: #92140C; 
     background-color: #1E1E24; 
     justify-content: space-evenly;
+    
 }
 
 .head-wrapper div {

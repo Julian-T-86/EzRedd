@@ -1,5 +1,13 @@
+h5 {
+    color: #fff8f0;
+}
+
 .icon-container {
     display: flex;
+}
+
+.icon-container p {
+    margin: 1.5rem 0px;
 }
 
 .post-icon {
@@ -17,9 +25,13 @@
 
 img {
     border-radius: 20px;
+    width: 95%;
+    margin: 0 2.5%;
+    padding: 0;
 }
 
 hr {
     border-top: #fff8f0 solid 1.5px;
     border-radius: 1px;
+    
 }

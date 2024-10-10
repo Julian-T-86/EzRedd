@@ -17,7 +17,7 @@ function App() {
     <div className={isExpanded ? 'grid-container' : 'sb-collapse'}>
       <SearchBar/>
       <SideBar toggleSideBar={toggleSideBar}/>
-      <Posts subreddit='reactjs'/>
+      <Posts subreddit='WatcherofRealmsGame'/>
     </div>
   );
 }
