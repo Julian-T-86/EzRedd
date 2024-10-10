@@ -31,7 +31,9 @@ export default function Posts({ subreddit }) {
                 <li key={post.id}>
                     <a href={`https://www.reddit.com${post.permalink}`} target="_blank" rel="noopener noreferrer">
                     {post.title}
+                        <p>{post.selftext}</p>
                     </a>
+                    
                 </li>
                 ))}
             </ul>
