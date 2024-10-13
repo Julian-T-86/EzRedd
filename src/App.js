@@ -7,17 +7,22 @@ import './App.css';
 
 function App() {
   const  [isExpanded, setIsExpanded]  = useState(true);
+  const [selectedSubreddit, setSelectedSubreddit] = useState('reactjs')
 
   const toggleSideBar = (e) => {
     e.preventDefault();
     setIsExpanded(!isExpanded);
   }
 
+  const handleSubredditChange = (subreddit) => {
+    setSelectedSubreddit(subreddit);
+  }
+
   return (
     <div className={isExpanded ? 'grid-container' : 'sb-collapse'}>
       <SearchBar/>
-      <SideBar toggleSideBar={toggleSideBar}/>
-      <Posts subreddit='WatcherofRealmsGame'/>
+      <SideBar toggleSideBar={toggleSideBar} onSubredditChange={handleSubredditChange}/>
+      <Posts subreddit={selectedSubreddit}/>
     </div>
   );
 }

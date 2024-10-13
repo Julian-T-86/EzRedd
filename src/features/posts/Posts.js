@@ -1,16 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRedditPosts } from './PostsSlice';
-
-import { BsDisplay } from "react-icons/bs";
+import { fetchRedditPosts } from './postsSlice';
 import Post from "./post/Post";
 import './Posts.css';
 
 export default function Posts({ subreddit }) {
     const dispatch = useDispatch();
-    const posts = useSelector(state => state.reddit.posts);
-    const status = useSelector(state => state.reddit.status);
-    const error = useSelector(state => state.reddit.error);
+    const posts = useSelector(state => state.posts.posts);
+    const status = useSelector(state => state.posts.status);
+    const error = useSelector(state => state.posts.error);
 
     useEffect(() => {
         dispatch(fetchRedditPosts(subreddit));
@@ -24,7 +22,6 @@ export default function Posts({ subreddit }) {
         return <div>Error: {error} </div>
     }
 
-    posts.map(post => console.log(post.url))
     return (
         <div className="posts-container"> 
             <h2>Top Posts from r/{subreddit}</h2>
