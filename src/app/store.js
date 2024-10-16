@@ -8,4 +8,8 @@ export const store = configureStore({
     posts: postsReducer,
     subreddits: subRedditsReducer,
   },
+  middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
 });
