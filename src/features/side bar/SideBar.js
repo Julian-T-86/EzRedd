@@ -21,21 +21,21 @@ export default function SideBar({ toggleSideBar, onSubredditChange }) {
 
     return (
         <div>
-            <h2>Sub Reddits:</h2>
+            <h2>Top subreddits:</h2>
             <button onClick={toggleSideBar}>
                 <TbSquareToggle 
-                    size='20px' 
-                    style={{ color: '#92140c' }} 
+                    size='75%' 
+                    style={{ color: '#92140c'}} 
                 />
             </button>
             <ul>
                 {filteredSubreddits.map(subreddit => (
-                    <li key={subreddit} onClick={() => handleSubredditClick(subreddit)}>
+                    <li className='subreddits' key={subreddit} onClick={() => handleSubredditClick(subreddit)}>
                         {subreddit}
                     </li>
                 ))}
-                {topSubreddits.map(subreddit => (
-                    <li key={subreddit} onClick={() => handleSubredditClick(subreddit)}>
+                {filteredSubreddits.length === 0 && topSubreddits.map(subreddit => (
+                    <li className='subreddits' key={subreddit} onClick={() => handleSubredditClick(subreddit)}>
                         {subreddit}
                     </li>
                 ))}

@@ -4,7 +4,8 @@
     color: #92140C; 
     background-color: #1E1E24; 
     justify-content: space-evenly;
-    
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff8f0;
 }
 
 .head-wrapper div {

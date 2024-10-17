@@ -7,6 +7,9 @@ div {
 
 div h2 {
     overflow: hidden;
+    margin-left: 4%;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #fff8f0;
 }
 
 div button {
@@ -14,9 +17,37 @@ div button {
     inset: 45vh -1.25rem auto auto;
     width: 2.5rem;
     aspect-ratio: 1;
-    background-color: #fff8f0;
+    background: #fff8f0;
     border: transparent;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1;
+}
+
+div button:hover {
+    background: radial-gradient(#fff8f0, 65%,#92140c ) ;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.subreddits {
+    border: 1px solid #fff8f0;
+    box-shadow: 4px 4px 4px;
+    width: 89%;
+    margin-bottom: 2px ;
+    border-radius: 5px;
+    background: radial-gradient(#fff8f0, 65%, #1e1e24 );
+    transition: all 1s ease-in-out;
+    text-align: center;
+}
+
+.subreddits:hover {
+    cursor: pointer;
+    background: radial-gradient(#fff8f0, 65%,#92140c );
+    color: #1E1E24;
+    font-weight: 700;
+    overflow: hidden;
+    width: 92%;
 }

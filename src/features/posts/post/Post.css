@@ -1,3 +1,17 @@
+h3 {
+    color: #fff8f0;
+    box-shadow: 3px 3px 4px red;
+    margin: auto;
+    display: inline-block;
+    width: 95%;
+    transition: all 1s ease-in-out;
+}
+
+h3:hover, h3:active {
+    box-shadow: -3px -3px 4px red;
+
+}
+
 h5 {
     color: #fff8f0;
 }
