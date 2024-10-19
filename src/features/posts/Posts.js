@@ -29,18 +29,19 @@ export default function Posts({ subreddit }) {
             <h2>Top Posts from r/{subreddit}</h2>
             <ul>
                 {posts.map(post => (
-                    <li key={post.id}>
-                        <Post 
-                            title={post.title}
-                            text={post.selftext}
-                            link={post.permalink}
-                            score={post.score}
-                            author={post.author}
-                            imageLink={post?.url}
-                        />
-                    </li>
-                ))}
+                <li key={post.id}>
+                    <Post 
+                        title={post.title}
+                        text={post.selftext}
+                        link={post.permalink}
+                        score={post.score}
+                        author={post.author}
+                        imageLink={post.url}
+                    />
+                </li>
+            ))}
             </ul>
+
         </div>
     );
 }
