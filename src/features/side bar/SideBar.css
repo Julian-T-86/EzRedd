@@ -34,6 +34,7 @@ ul {
 
 ul li {
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .subreddits {
