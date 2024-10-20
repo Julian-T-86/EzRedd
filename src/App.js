@@ -4,6 +4,9 @@ import SideBar from './features/side bar/SideBar';
 import Posts from './features/posts/Posts';
 import './App.css';
 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
 function App() {
     const [isExpanded, setIsExpanded] = useState(true);
     const [selectedSubreddit, setSelectedSubreddit] = useState('reactjs');
@@ -18,11 +21,16 @@ function App() {
     };
 
     return (
-        <div className={isExpanded ? 'grid-container' : 'sb-collapse'}>
-            <SearchBar onSubredditChange={handleSubredditChange} />
-            <SideBar toggleSideBar={toggleSideBar} onSubredditChange={handleSubredditChange} />
-            <Posts subreddit={selectedSubreddit} />
-        </div>
+        <Router>
+            <div className={isExpanded ? 'grid-container' : 'sb-collapse'}>
+                <SearchBar onSubredditChange={handleSubredditChange} />
+                <SideBar toggleSideBar={toggleSideBar} onSubredditChange={handleSubredditChange} />
+                <Routes>
+                    <Route path="/" element={<Posts subreddit={selectedSubreddit} />} />
+                    <Route path="/:subreddit" element={<Posts subreddit={selectedSubreddit} />} />
+                </Routes>
+            </div>
+        </Router>
     );
 }
 

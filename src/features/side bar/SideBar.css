@@ -32,6 +32,10 @@ ul {
     list-style-type: none;
 }
 
+ul li {
+    overflow: hidden;
+}
+
 .subreddits {
     border: 1px solid #fff8f0;
     box-shadow: 4px 4px 4px;

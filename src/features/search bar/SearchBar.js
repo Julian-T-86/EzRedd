@@ -4,18 +4,21 @@ import useDebounce from '../../hooks/useDebounce';
 import './SearchBar.css';
 import { useDispatch } from "react-redux";
 import { fetchFilteredSubreddits } from "../side bar/sideBarSlice";
-// import { setSearchTerm, filterPosts } from "../posts/postsSlice";
+import { useSearchParams } from "react-router-dom";
 
 export default function SearchBar({ onSubredditChange }) {
     const dispatch = useDispatch();
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchParams, setSearchParams] = useSearchParams();
+    const initialSearchTerm = searchParams.get('search') || '';
+    const [searchTerm, setSearchTerm] = useState(initialSearchTerm);
     const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
     useEffect(() => {
         if (debouncedSearchTerm) {
+            setSearchParams({ search: debouncedSearchTerm });
             dispatch(fetchFilteredSubreddits(debouncedSearchTerm));
         }
-    }, [debouncedSearchTerm, dispatch]);
+    }, [debouncedSearchTerm, dispatch, setSearchParams]);
 
     const handleSearch = (e) => {
         setSearchTerm(e.target.value);

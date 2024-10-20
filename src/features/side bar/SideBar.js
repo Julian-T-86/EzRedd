@@ -4,7 +4,12 @@ import { fetchPopularSubreddits } from './sideBarSlice';
 import { TbSquareToggle } from "react-icons/tb";
 import './SideBar.css';
 
+import { useNavigate } from 'react-router-dom';
+
 export default function SideBar({ toggleSideBar, onSubredditChange }) {
+    //const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
+
     const dispatch = useDispatch();
     const filteredSubreddits = useSelector(state => state.subreddits.filteredSubreddits);
     const topSubreddits = useSelector(state => state.subreddits.topSubreddits);
@@ -16,7 +21,9 @@ export default function SideBar({ toggleSideBar, onSubredditChange }) {
     }, [dispatch]);
 
     const handleSubredditClick = (subreddit) => {
+        //setSearchParams({ search: subreddit})
         onSubredditChange(subreddit);
+        navigate(`/${subreddit}`);
     };
 
     return (
